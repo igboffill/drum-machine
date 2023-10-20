@@ -1,0 +1,32 @@
+body * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.drum-keyboard {
+  padding: 20px;
+  position: absolute;
+  background-color: rgb(197, 197, 197);
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 60px);
+  grid-template-rows: repeat(3, 60px);
+  grid-gap: 5px;
+}
+
+
+.drum-key {
+  background-color: rgb(243, 243, 243);
+  border: 2px solid black;
+  border-radius: 5px;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 17px;
+}
+
+.drum-key:hover, .drum-key.pressed {
+  border: 1px solid #eeeeee;
+}
+
