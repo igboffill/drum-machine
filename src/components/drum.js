@@ -1,68 +1,14 @@
-import DrumKey from "./drum-key"
+import { useState } from "react";
+import { DrumKey, Keys } from "./drum-key"
+
+
 
 export default function Drum() {
-    const keys = [
-        {
-            value: 'Q',
-            audio: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3'
-        },
-        {
-            value: 'W',
-            audio: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3'
-        },
-        {
-            value: 'E',
-            audio: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3'
-        },
-        {
-            value: 'A',
-            audio: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3'
-        },
-        {
-            value: 'S',
-            audio: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3'
-        },
-        {
-            value: 'D',
-            audio: 'https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3'
-        },
-        {
-            value: 'Z',
-            audio: 'https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3'
-        },
-        {
-            value: 'X',
-            audio: 'https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3'
-        },
-        {
-            value: 'C',
-            audio: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'
-        },
-
-    ];
-
-
-    document.addEventListener("keydown", (e) => {
-        if (!e.repeat) {
-            keys.forEach(k => {
-
-                if (!k.pressed && k.value.toUpperCase() == e.key.toUpperCase() && k.audio) {
-
-                    const audioElement = new Audio(k.audio);
-                    k.pressed = true;
-                    audioElement.play();
-
-                }
-            });
-        }
-    }, false);
-
-
 
     return (
         <div className="drum-keyboard">
             {
-                keys.map((key, index) => <DrumKey value={key.value} index={index} audio={key.audio} pressed={key.pressed}></DrumKey>)
+                Keys.map((key, index) => <DrumKey index={index} ></DrumKey>)
             }
         </div>
     )
