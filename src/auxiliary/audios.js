@@ -1,4 +1,4 @@
-import { KeysValues } from "../keys";
+import { KeysValues } from "./keys";
 
 export function playAudio(keyValue) {
     const _keyValue = keyValue.toUpperCase()

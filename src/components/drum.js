@@ -1,11 +1,9 @@
 
 import { DrumKey } from "./drum-key"
-import { Keys, KeysValues } from "../keys";
+import { Keys, KeysValues } from "../auxiliary/keys";
 import { useDispatch } from "react-redux";
 import { setPressed, setReleased } from "../redux/actions";
 import { playAudio } from "../auxiliary/audios";
-
-
 
 export default function Drum({ pressedKeys = [] }) {
 

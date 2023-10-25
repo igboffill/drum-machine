@@ -4,8 +4,6 @@ import { DrumAudio } from "./drum-audio";
 import { setPressed, setReleased } from "../redux/actions";
 import { playAudio } from "../auxiliary/audios";
 
-
-
 export function DrumKey({  id='', value='',  audio = '', pressed = false, }) {
 
     const dispatch = useDispatch();
